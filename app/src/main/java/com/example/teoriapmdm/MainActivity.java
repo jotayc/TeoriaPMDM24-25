@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 /**
  * Actividad Interfaz: Button
  * @author JC
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Todo 2: Declaración de objetos
+    private Button btn_show;
+    private TextView txt_view;
 
     //Todo 1: OnCreate como primera función para inicializar elementos de la actividad
     @Override
@@ -39,16 +43,57 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Todo 4: Inicialización de variables
-
+        this.btn_show = (Button) findViewById(R.id.btn_show);
+        this.txt_view = (TextView) findViewById(R.id.txt_view);
 
         //Todo 5. Los botones tienen un listener según el tipo de toque sobre la vista.
         //Todo -> para ello se usa una clase anonima y se implementa su interfaz.
         //Todo -> Desde Java 8 se sustituyen las clases anonimas por lambdas
 
 
+        this.btn_show.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                txt_view.setText("Hola 2DAM");
+            }
+        });
+
+        this.btn_show.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                txt_view.setText("Esto es una pulsación larga");
+                return true;
+            }
+        });
     }
 
     //Todo 6. Los siguientes métodos forman parte del ciclo de vida de cualquier actividad
     //Todo    Se podría ver como un diagrama de estados.
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
