@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         //Todo 6. Creamos el listener correpondiente para que capture el evento de selección
 
 
-
     }
         //Todo 3. Creamos una notificación simple
 
