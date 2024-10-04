@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Todo 2. Inicialización de los elementos de la interfaz.
         this.spinner = (Spinner) findViewById(R.id.spinner);
-
         //Todo 3. Creamos un adaptador que unirá la lista de elementos, con el diseño que se usará para mostrar cada fila (Android ya trae un disñeño por defecto)
         ArrayAdapter adaptador = ArrayAdapter.createFromResource(this,R.array.provincias, android.R.layout.simple_spinner_item);
 
